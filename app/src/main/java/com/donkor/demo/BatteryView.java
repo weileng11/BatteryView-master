@@ -113,14 +113,23 @@ public class BatteryView extends View {
         paint.setStrokeWidth(strokeWidth);
         int headHeight = (int) (strokeWidth + 0.5f);
         RectF rect = new RectF(strokeWidth2, headHeight + strokeWidth2, width - strokeWidth2, height - strokeWidth2);
+	    //设置外边框颜色为黑色
+	    paint.setColor(Color.BLUE);
         canvas.drawRect(rect, paint);
         paint.setStrokeWidth(0);
+	    //画电池内矩形电量
         float topOffset = (height - headHeight - strokeWidth) * (100 - mPower) / 100.0f;
         RectF rect2 = new RectF(strokeWidth, headHeight + strokeWidth + topOffset, width - strokeWidth, height - strokeWidth);
         paint.setStyle(Paint.Style.FILL);
+	    //根据电池电量决定电池内矩形电量颜色
+	    paint.setColor(Color.RED);
         canvas.drawRect(rect2, paint);
+	    //画电池头
         RectF headRect = new RectF(width / 4.0f, 0, width * 0.75f, headHeight);
         canvas.drawRect(headRect, paint);
+	    //设置电池头颜色为黑色
+	    paint.setColor(Color.BLUE);
+	    canvas.drawRect(headRect, paint);
     }
 
     /**

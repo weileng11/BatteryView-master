@@ -41,7 +41,7 @@ public class MainActivity extends Activity {
         horizontalBattery = (BatteryView) findViewById(R.id.horizontalBattery);
         verticalBattery = (BatteryView) findViewById(R.id.verticalBattery);
 	
-	    verticalBattery.setColor(Color.BLUE);
+	    verticalBattery.setColor(Color.GREEN);
 	    verticalBattery.setPower(65);
 	
 	    horizontalBattery.setColor(Color.BLUE);

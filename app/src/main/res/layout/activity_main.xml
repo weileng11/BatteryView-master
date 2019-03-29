@@ -26,5 +26,7 @@
         android:background="#fff"
         android:gravity="center"
         app:batteryOrientation="vertical"
+	    app:batteryPower="60"
+	    app:batteryColor="@android:color/holo_green_light"
         />
 </LinearLayout>
